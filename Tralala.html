@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        /* NAvigation Bar */
+        body {
+            margin: 0em;
+        }
+
+        body::before {
+            background: url('https://cdn.pixabay.com/photo/2018/02/03/08/00/background-3127102_1280.jpg');
+            content: "";
+            position: absolute;
+            top: 0em;
+            left: 0em;
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .left {
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+        }
+
+        .mid {
+            display: inline-block;
+            width: 36%;
+            text-align: center;
+            font-size: 1.7em;
+            color: white;
+        }
+
+        .right {
+            display: inline-block;
+            width: 30%;
+            text-align: right;
+        }
+
+        .a {
+            display: inline-block;
+            padding: 10px;
+            background-color: rgb(64, 144, 172);
+            border-radius: 3px;
+
+        }
+
+        #ac {
+            display: inline-block;
+            padding: 0px;
+            background-color: rgb(64, 144, 172);
+            border-radius: 3px;
+        }
+
+        .in:focus-within {
+            background-color: white;
+        }
+
+        .in {
+            background-color: rgb(64, 144, 172);
+            border: none;
+            height: 35px;
+            border-radius: 3px;
+        }
+
+        .nav {
+            background-color: rgba(64, 144, 172, .7);
+        }
+
+        /* Header Section */
+        .h {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background-color: rgba(128, 128, 128, 0.4);
+        }
+
+        .head {
+            padding: 10px 30px;
+            color: white;
+        }
+
+        /* Body Section */
+        .sec {
+            display: flex;
+        }
+
+        .box {
+            border: 2px solid red;
+            background-color: rgba(240, 240, 240, 0.9);
+            padding: 5px 7px;
+            border-radius: 7px;
+            margin: 15px 3px;
+        }
+        .box p{
+            font-weight: bold;
+            color: rgb(117, 115, 115);
+            font-size: 1.2em;
+        }
+        .boxin{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 7px;
+            padding: 7px;
+            margin: 12px;
+            width: 134px;
+        }
+        .boxn{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 7px;
+            padding: 7px;
+            margin: 12px;
+            width: 134px;
+        }
+        .box span{
+            font-weight: lighter;
+            color: rgb(99, 99, 99);
+        }
+        .box span:hover{
+            color: grey;
+            cursor: pointer;
+        }
+        #box1{
+            height: 217px;
+            margin-left: 7px;
+        }
+        #box2{
+            height: 250px;
+        }
+        #box3{
+            height: 128px;
+        }
+        #box4{
+            height: 128px;
+        }
+        #box5{
+            height: 83px;
+            width: 204px;
+        }
+        #box6{
+            height: 20px;
+            width: 190px;
+        }
+        #box7{
+            height: 161px;
+    width: 279px;
+        }
+        .box textarea{
+            border-radius: 7px;
+        }
+        .boxin:hover{
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        .boxn:hover{
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        .btn{
+            background-color: rgb(143, 153, 0);
+            padding: 7px;
+            margin: 3px;
+            border-radius: 4px;
+            border: 0px;
+            font-size: 1.3em;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: rgba(143, 153, 0,.8);
+        }
+        #bbtun{
+            font-size: 2em;
+        }
+        #bbtun:hover{
+            color:grey;
+        }
+        .a:hover{
+            color: gray;
+        }
+        .asdf:hover{
+            color: gray;
+        }
+        #asdfg:hover{
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            <ul>
+                <li id="aa" class="a"><i class="fas fa-home" style="filter: invert(100%);"></i></li>
+                <li id="ab" class="a"><i class="fas fa-th-list" style="filter: invert(100%);"></i><span
+                        style="color: white;"><span class="asdf"> Boards</span></span></li>
+                <li id="ac" class="a"><input type="text" class="in"></li>
+            </ul>
+        </div>
+        <div class="mid">
+            Tralala
+        </div>
+        <div class="right">
+            <ul>
+                <li id="ba" class="a"><i class="fas fa-plus" style="filter: invert(100%);"></i></li>
+                <li id="bb" class="a"><i class="fas fa-user" style="filter: invert(100%);"></i></li>
+            </ul>
+        </div>
+    </div>
+    <header class="h">
+        <div class="head">Frontend Training</div>
+        <div class="head"><i class="fas fa-ellipsis-v" id="asdfg"></i> <span class="asdf">Show menu</span></div>
+    </header>
+    <section class="sec">
+        <div class="box" id="box1">
+            <p>To Do</p>
+            <div class="boxin">Learn HTML<i class="fas fa-pencil-alt"></i></div>
+            <div class="boxin">Learn CSS<i class="fas fa-pencil-alt"></i></div>
+            <div class="boxin">Learn JavaScript<i class="fas fa-pencil-alt"></i></div>
+            <span>+Add another card</span>
+        </div>
+        <div class="box" id="box2">
+            <p>Doing</p>
+            <div class="boxn">Prepare resume</div>
+            <textarea name="" id="" cols="20" rows="5" placeholder="Enter a title for this card..."></textarea>
+            <button class="btn">Add Card</button> <i class="fas fa-times" id="bbtun"></i>
+        </div>
+        <div class="box" id="box3">
+            <p>Testing/Verifying</p>
+            <div class="boxn">Twitter app frontend</div>
+            <span>+Add another card</span>
+        </div>
+        <div class="box" id="box4">
+            <p>Deploying</p>
+            <div class="boxn">Twitter app backend</div>
+            <span>+Add another card</span>
+        </div>
+        <div class="box" id="box5">
+            <p>Done</p>
+            <span>+Add card</span>
+        </div>
+        <div class="box" id="box6">
+            <span>+ Add another list</span>
+        </div>
+        <div class="box" id="box7">
+            <textarea name="" id="" cols="35" rows="5" placeholder="Enter list title..."></textarea>
+            <button class="btn">Add List</button> <i class="fas fa-times" id="bbtun"></i>
+        </div>
+</body>
+
+</html>
